@@ -11,6 +11,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { PostComponent } from './post/post.component';
 import { WordpressPostsComponent } from './wordpress-posts/wordpress-posts.component';
 import { BlogPostComponent } from './blog-post/blog-post.component';
+import { PagesComponent } from './pages/pages.component';
+import { BlogSearchComponent } from './blog-search/blog-search.component';
+import { FormsModule } from '@angular/forms'; 
 
 
   
@@ -24,14 +27,17 @@ import { BlogPostComponent } from './blog-post/blog-post.component';
     PostComponent,
     WordpressPostsComponent,
     BlogPostComponent,
+    PagesComponent,
+    BlogSearchComponent,
    
    
-  ],
+  ], 
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
-   
+    HttpClientModule,
+    FormsModule 
+     
   ],
   providers: [WordpressService],
   bootstrap: [AppComponent]
