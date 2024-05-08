@@ -1,0 +1,21 @@
+<!-- <div *ngFor="let post of posts">
+    <h2>{{ post.title.rendered }}</h2>
+    <div [innerHTML]="post.content.rendered"></div>
+    <img *ngIf="post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0].source_url" [src]="post._embedded['wp:featuredmedia'][0].source_url" alt="Featured Image">
+  </div> -->
+  <div class="row">
+    <div class="col-md-4" *ngFor="let post of posts">
+      <div class="card mb-4" style="max-width: 18rem;">
+        <img class="card-img-top" *ngIf="post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'][0].source_url" [src]="post._embedded['wp:featuredmedia'][0].source_url" alt="Featured Image">
+        
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title.rendered }}</h5>
+          <p class="card-text" [innerHTML]="post.content.rendered"></p>
+          <button (click)="getPostById(post.id)" class="btn btn-primary">Read more</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  

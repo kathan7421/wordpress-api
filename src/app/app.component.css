@@ -1,0 +1,18 @@
+*{
+    margin: 0px 0px;
+    padding: 0px 0px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.carousel {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .slide {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 40px 0;
+    background: #f8f8f8;
+  }
+  
